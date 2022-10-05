@@ -1,91 +1,39 @@
-import {
-  MagnifyingGlassIcon,
-  ChevronDownIcon,
-} from "@heroicons/react/24/solid";
 import courses from "../data/courses";
 import CourseItem from "./CourseItem";
+import SearchBar from "./SearchBar";
+import SortingSelect from "./SortingSelect";
 
 const Course = () => {
   return (
     <div className="bg-[#F3F4F8]">
-      <div className="max-w-6xl mx-auto px-6 py-16 lg:py-20">
+      <div className="space-y-8 max-w-7xl mx-auto px-6 py-16 lg:py-20">
         <div>
           <h4 className="text-sm text-gray-600">Courses</h4>
-          <h3 className="text-2xl font-medium">Students are learning</h3>
+          <h3 className="text-2xl xl:text-3xl font-medium">Students are learning</h3>
         </div>
-        <div className="relative">
-          <button className="absolute top-[.85rem] left-2" type="submit">
-            <MagnifyingGlassIcon className="h-4 text-gray-600" />
-          </button>
-          <input
-            className="bg-white shadow-md rounded-md text-sm py-3 px-10 focus:outline-none"
-            type="search"
-            name="search"
-            placeholder="Search courses"
-          />
+        <div className="flex flex-col md:flex-row gap-8 justify-between md:items-end">
+        <SearchBar className="md:order-2" />
+        <SortingSelect />
         </div>
-        <div class="flex">
-          <div class="xl:w-40 relative text-center">
-            <select
-              class="form-select text-center appearance-none block w-full px-3 py-3
-                    text-base
-                    font-medium
-                    text-black bg-white bg-clip-padding bg-no-repeat
-                    border border-solid border-gray-300
-                    rounded
-                    transition
-                    ease-in-out
-                    m-0
-                  focus:bg-white focus:border-blue-600 focus:outline-none"
-              aria-label="Default select example"
-            >
-              <option selected>Categories</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-            <ChevronDownIcon className="h-4 absolute right-3 top-4" />
-          </div>
-          <div class="xl:w-40 relative">
-            <select
-              class="form-select text-center appearance-none block w-full px-3 py-3
-                    text-base
-                    font-medium                 
-                  text-black
-                    bg-white bg-clip-padding bg-no-repeat
-                    border border-solid border-gray-300
-                    rounded
-                    transition
-                    ease-in-out
-                    m-0
-                    focus:bg-white focus:border-blue-600 focus:outline-none"
-              aria-label="Default select example"
-            >
-              <option selected>Free</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-            <ChevronDownIcon className="h-4 absolute right-3 top-4" />
-          </div>
-        </div>
-
         <div className="relative">
           <div className="flex space-x-4 sm:space-x-7 overflow-x-scroll scrollbar-hide">
             {courses.map((course) => (
               <CourseItem
-                title={course.title}
+                course={course.course}
                 instructor={course.instructor}
                 duration={course.duration}
-                ratings={course.ratings}
+                rating={course.rating}
                 reviews={course.reviews}
                 initialCost={course.initialCost}
                 offerCost={course.offerCost}
-                key={course.key}
+                key={course.id}
               />
             ))}
           </div>
-          <div className="absolute top-0 right-0 h-96 w-2/12 bg-gradient-to-l from-[#ffffff]" />
+          <div className="absolute top-0 right-0 h-96 w-2/12 bg-gradient-to-l from-[#f3f4f8]" />
+        </div>
+        <div className="w-fit mx-auto">
+          <a className="bg-yellow px-14 py-3 rounded-3xl shadow-md">See All</a>
         </div>
       </div>
     </div>

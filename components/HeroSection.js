@@ -26,8 +26,10 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="hidden xl:block w-[566px] h-[550px]">
-          <Image height={662} width={705.84} src="/heroine-img.png" />
+        <div className="relative hidden xl:block w-[566px] h-[550px]">
+          <div className="absolute -bottom-1">
+            <Image height={662} width={705.84} src="/heroine-img.png" />
+          </div>
         </div>
       </div>
     </div>

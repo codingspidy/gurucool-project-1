@@ -1,9 +1,12 @@
 import Head from "next/head";
 import Course from "../components/Course";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
+import LatestCourse from "../components/LatestCourse";
 import LearningHistory from "../components/LearningHistory";
 import Niche from "../components/Niche";
+import Recommend from "../components/Recommend";
 
 export default function Home() {
   return (
@@ -22,6 +25,9 @@ export default function Home() {
         <LearningHistory />
         <Niche />
         <Course />
+        <Recommend />
+        <LatestCourse />
+        <Footer />
     </div>
   );
 }

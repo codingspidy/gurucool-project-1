@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <div className="bg-black text-white">
-      <header className="flex items-center justify-between h-[70px] max-w-[80rem] mx-auto px-3 md:px-5 xl:px-7">
+      <header className="flex items-center justify-between h-[70px] max-w-[1350px] mx-auto px-3 md:px-5 xl:px-7">
         <div className="hidden xl:block">
           <Image src="/logo-lg.png" width={116} height={34} />
         </div>
@@ -50,7 +50,7 @@ const Header = () => {
             </li>
             <li className="flex flex-col -mt-[7px]">
               <span className="text-yellow text-[9px] leading-none -mb-0.5">
-                FREE
+                Free
               </span>
               <a>Study Material</a>
             </li>
