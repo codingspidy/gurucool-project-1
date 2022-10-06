@@ -9,7 +9,7 @@ const Niche = () => {
           <h4 className="text-sm text-gray-400">Categories</h4>
           <h3 className="text-2xl xl:text-4xl font-medium">Choose your niche</h3>
         </div>
-        <div className="flex flex-wrap gap-y-5 gap-x-3 lg:gap-y-7 lg:gap-x-4 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xs:grid-cols-2 gap-y-5 gap-x-3 lg:gap-y-7 lg:gap-x-4 mt-10">
           {niches.map((niche) => (
             <NicheItem
               key={niche.id}

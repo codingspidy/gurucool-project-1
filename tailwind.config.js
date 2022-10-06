@@ -8,6 +8,10 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'xs': '360px',
+      ...defaultTheme.screens,
+    },
     extend: {
       colors: {
         yellow: '#F9C933'
@@ -15,9 +19,6 @@ module.exports = {
       fontFamily: {
         'sans': ['Poppins', ...defaultTheme.fontFamily.sans],
       },
-      screens: {
-        xs: "360"
-      }
     },
   },
   plugins: [require('tailwind-scrollbar-hide')],
