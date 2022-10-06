@@ -11,7 +11,7 @@ const LatestCourse = () => {
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20 space-y-6">
-        <h3 className="text-2xl font-medium">
+        <h3 className="text-2xl xl:text-3xl font-medium">
           Learn new courses to enhance your skills
         </h3>
         <nav className="border-b-2 border-gray-300 py-3">
