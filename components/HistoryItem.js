@@ -8,6 +8,7 @@ const HistoryItem = ({
   src,
   alt,
 }) => {
+  
   return (
     <div className="px-1 py-2 rounded-[20px]">
       <div className="min-w-[300px] flex space-x-2 items-center rounded-[20px] shadow-lg cursor-pointer">

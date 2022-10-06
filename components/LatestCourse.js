@@ -1,8 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import courses from "../data/courses";
 import CourseItem from "./CourseItem";
 
 const LatestCourse = () => {
+  useEffect(() => {
+    const slider = document.querySelector("#latest-course");
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener("mousedown", (e) => {
+      isDown = true;
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener("mouseleave", () => {
+      isDown = false;
+    });
+    slider.addEventListener("mouseup", () => {
+      isDown = false;
+    });
+    slider.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 2; //scroll-fast
+      slider.scrollLeft = scrollLeft - walk;
+    });
+  });
+
   const [courseType, setCourseType] = useState("app_dev");
   const handleClick = (e) => {
     setCourseType(e.target.id);
@@ -67,7 +93,7 @@ const LatestCourse = () => {
           </ul>
         </nav>
         <div className="relative -ml-2">
-          <div className="flex space-x-4 sm:space-x-7 overflow-x-scroll scrollbar-hide">
+          <div id="latest-course" className="flex space-x-4 sm:space-x-7 overflow-x-scroll scrollbar-hide">
             {courses
               .filter((c) => c.tag === courseType)
               .map((course) => (
@@ -84,7 +110,7 @@ const LatestCourse = () => {
                 />
               ))}
           </div>
-          <div className="absolute top-0 right-0 h-96 w-2/12 bg-gradient-to-l from-[#ffffff]" />
+          <div className="pointer-events-none absolute top-0 right-0 h-96 w-2/12 bg-gradient-to-l from-[#ffffff]" />
         </div>
       </div>
     </div>

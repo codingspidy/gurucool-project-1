@@ -2,8 +2,35 @@ import courses from "../data/courses";
 import CourseItem from "./CourseItem";
 import SearchBar from "./SearchBar";
 import SortingSelect from "./SortingSelect";
+import { useEffect } from "react";
 
 const Course = () => {
+  useEffect(() => {
+    const slider = document.querySelector("#course-container");
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener("mousedown", (e) => {
+      isDown = true;
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener("mouseleave", () => {
+      isDown = false;
+    });
+    slider.addEventListener("mouseup", () => {
+      isDown = false;
+    });
+    slider.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 2; //scroll-fast
+      slider.scrollLeft = scrollLeft - walk;
+    });
+  });
+
   return (
     <div className="bg-[#F3F4F8]">
       <div className="space-y-8 max-w-7xl mx-auto px-6 py-16 lg:py-20">
@@ -16,7 +43,7 @@ const Course = () => {
         <SortingSelect />
         </div>
         <div className="relative -ml-1">
-          <div className="flex space-x-3 sm:space-x-6 overflow-x-scroll scrollbar-hide">
+          <div id="course-container" className="flex space-x-3 sm:space-x-6 overflow-x-scroll scrollbar-hide">
             {courses.map((course) => (
               <CourseItem
                 course={course.course}
@@ -31,10 +58,10 @@ const Course = () => {
               />
             ))}
           </div>
-          <div className="absolute top-0 right-0 h-96 w-2/12 bg-gradient-to-l from-[#f3f4f8]" />
+          <div className="pointer-events-none absolute top-0 right-0 h-96 w-2/12 bg-gradient-to-l from-[#f3f4f8]" />
         </div>
         <div className="w-fit mx-auto">
-          <a className="bg-yellow px-14 py-3 rounded-3xl shadow-md">See All</a>
+          <a className="bg-yellow px-14 py-3 rounded-3xl shadow-md cursor-pointer">See All</a>
         </div>
       </div>
     </div>

@@ -16,7 +16,7 @@ const CourseItem = ({
     <div className="px-2 py-4">
       <div
         className={
-          "w-fit h-full shadow-lg bg-white rounded-[20px] " + className
+          "w-fit h-full shadow-lg bg-white rounded-[20px] cursor-pointer " + className
         }
       >
         <div className="w-60 lg:w-64 h-40 lg:h-44 bg-[url('/course-img.png')] bg-cover rounded-[20px]" />
