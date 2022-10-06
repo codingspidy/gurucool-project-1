@@ -15,8 +15,8 @@ const Course = () => {
         <SearchBar className="md:order-2" />
         <SortingSelect />
         </div>
-        <div className="relative">
-          <div className="flex space-x-4 sm:space-x-7 overflow-x-scroll scrollbar-hide">
+        <div className="relative -ml-1">
+          <div className="flex space-x-3 sm:space-x-6 overflow-x-scroll scrollbar-hide">
             {courses.map((course) => (
               <CourseItem
                 course={course.course}
@@ -27,6 +27,7 @@ const Course = () => {
                 initialCost={course.initialCost}
                 offerCost={course.offerCost}
                 key={course.id}
+                className="p-4"
               />
             ))}
           </div>

@@ -20,7 +20,7 @@ const Niche = () => {
           ))}
         </div>
         <div className="mt-10">
-        <a className="font-medium text-decoration underline cursor-pointer">See All Categories</a>
+        <a className="font-medium text-decoration underline text-sm xl:text-lg cursor-pointer">See All Categories</a>
         </div>
       </div>
     </div>
