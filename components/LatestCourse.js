@@ -15,12 +15,12 @@ const LatestCourse = () => {
           Learn new courses to enhance your skills
         </h3>
         <nav className="border-b-2 border-gray-300 py-3">
-          <ul className="navbar flex space-x-10 text-gray-500 text-sm xl:text-[15px] font-medium">
+          <ul className="navbar flex space-x-10 text-gray-500 text-[13px] xl:text-sm font-medium">
             <li>
               <a
                 className={
                   "cursor-pointer py-3 " +
-                  (courseType === "app_dev" && "border-b border-black")
+                  (courseType === "app_dev" && "border-b-2 border-black")
                 }
                 onClick={handleClick}
                 id="app_dev"
