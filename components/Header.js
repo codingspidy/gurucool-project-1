@@ -40,34 +40,36 @@ const Header = () => {
         >
           <ul className="flex flex-col xl:flex-row xl:items-center gap-7 xl:gap-10 text-sm">
             <li>
-              <a>About</a>
+              <a className="cursor-pointer">About</a>
             </li>
             <li className="flex flex-col -mt-[7px]">
               <span className="text-yellow text-[9px] leading-none -mb-0.5">
                 LIVE
               </span>
-              <a>Masterclass</a>
+              <a className="cursor-pointer">Masterclass</a>
             </li>
             <li className="flex flex-col -mt-[7px]">
               <span className="text-yellow text-[9px] leading-none -mb-0.5">
                 Free
               </span>
-              <a>Study Material</a>
+              <a className="cursor-pointer">Study Material</a>
             </li>
             <li className="flex flex-col -mt-[7px]">
               <span className="text-yellow text-[9px] leading-none -mb-0.5">
                 HOT
               </span>
-              <a>Solved Questions</a>
+              <a className="cursor-pointer">Solved Questions</a>
             </li>
             <li>
-              <a>Doubt Space</a>
+              <a className="cursor-pointer">Doubt Space</a>
             </li>
           </ul>
         </nav>
         <div className="hidden xl:flex items-center space-x-2">
-          <Image src="/profileCTA.png" width={40} height={40} />
-          <span className="text-sm">GmatriX</span>
+          <div className="cursor-pointer">
+            <Image src="/profileCTA.png" width={40} height={40} />
+          </div>
+          <span className="text-sm cursor-pointer">GmatriX</span>
         </div>
       </header>
     </div>
