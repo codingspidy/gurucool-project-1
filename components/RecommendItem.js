@@ -23,7 +23,7 @@ const RecommendItem = ({
           <div className="text-[10px] lg:text-xs">{rating + `(${reviews} reviews)`}</div>
         </div>
         <div className="flex gap-2 items-center">
-          <span className="text-[22px] lg:text-xl font-semibold">
+          <span className="text-[19px] lg:text-xl font-semibold">
             {offerCost}
           </span>
           <span className="text-[10px] lg:text-xs line-through text-gray-500">

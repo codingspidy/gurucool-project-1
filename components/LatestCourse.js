@@ -15,7 +15,7 @@ const LatestCourse = () => {
           Learn new courses to enhance your skills
         </h3>
         <nav className="border-b-2 border-gray-300 py-3">
-          <ul className="navbar flex space-x-10 text-gray-500 text-base font-medium">
+          <ul className="navbar flex space-x-10 text-gray-500 text-sm xl:text-[15px] font-medium">
             <li>
               <a
                 className={
