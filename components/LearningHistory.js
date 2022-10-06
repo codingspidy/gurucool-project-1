@@ -6,7 +6,7 @@ const LearningHistory = () => {
     <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20 mb-10">
       <div>
         <h4 className="text-sm text-gray-400">Your courses</h4>
-        <h3 className="text-2xl xl:text-3xl font-medium">Continue learning</h3>
+        <h3 className="text-2xl xl:text-4xl font-medium">Continue learning</h3>
       </div>
       <div className="relative">
       <div className="mt-5 flex space-x-4 sm:space-x-7 overflow-x-scroll scrollbar-hide">

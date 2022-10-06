@@ -9,7 +9,7 @@ const Course = () => {
       <div className="space-y-8 max-w-7xl mx-auto px-6 py-16 lg:py-20">
         <div>
           <h4 className="text-sm text-gray-600">Courses</h4>
-          <h3 className="text-2xl xl:text-3xl font-medium">Students are learning</h3>
+          <h3 className="text-2xl xl:text-4xl font-medium">Students are learning</h3>
         </div>
         <div className="flex flex-col md:flex-row gap-8 justify-between md:items-end">
         <SearchBar className="md:order-2" />

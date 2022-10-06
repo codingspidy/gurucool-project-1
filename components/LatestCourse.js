@@ -11,16 +11,16 @@ const LatestCourse = () => {
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20 space-y-6">
-        <h3 className="text-2xl xl:text-3xl font-medium">
+        <h3 className="text-2xl xl:text-4xl font-medium">
           Learn new courses to enhance your skills
         </h3>
-        <nav className="border-b-2 border-gray-300 py-3">
+        <nav className="border-b border-gray-300 py-3">
           <ul className="navbar flex space-x-10 text-gray-500 text-[13px] xl:text-sm font-medium">
             <li>
               <a
                 className={
                   "cursor-pointer py-3 " +
-                  (courseType === "app_dev" && "border-b-2 border-black")
+                  (courseType === "app_dev" && "text-black border-b-2 border-black")
                 }
                 onClick={handleClick}
                 id="app_dev"
@@ -32,7 +32,7 @@ const LatestCourse = () => {
               <a
                 className={
                   "cursor-pointer py-3 " +
-                  (courseType === "web_design" && "border-b-2 border-black")
+                  (courseType === "web_design" && "text-black border-b-2 border-black")
                 }
                 onClick={handleClick}
                 id="web_design"
@@ -44,7 +44,7 @@ const LatestCourse = () => {
               <a
                 className={
                   "cursor-pointer py-3 " +
-                  (courseType === "html" && "border-b-2 border-black")
+                  (courseType === "html" && "text-black border-b-2 border-black")
                 }
                 onClick={handleClick}
                 id="html"
@@ -56,7 +56,7 @@ const LatestCourse = () => {
               <a
                 className={
                   "cursor-pointer py-3 " +
-                  (courseType === "css" && "border-b-2 border-black")
+                  (courseType === "css" && "text-black border-b-2 border-black")
                 }
                 onClick={handleClick}
                 id="css"

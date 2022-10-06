@@ -7,7 +7,7 @@ const Niche = () => {
       <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
         <div>
           <h4 className="text-sm text-gray-400">Categories</h4>
-          <h3 className="text-2xl xl:text-3xl font-medium">Choose your niche</h3>
+          <h3 className="text-2xl xl:text-4xl font-medium">Choose your niche</h3>
         </div>
         <div className="flex flex-wrap gap-y-5 gap-x-3 lg:gap-y-7 lg:gap-x-4 mt-10">
           {niches.map((niche) => (
