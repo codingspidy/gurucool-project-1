@@ -9,7 +9,7 @@ const RecommendItem = ({
   initialCost,
 }) => {
   return (
-    <div className="flex items-center rounded-[20px] w-full max-w-[400px] border-2 p-2 gap-4 border-gray-300">
+    <div className="flex items-center rounded-[20px] w-full max-w-[400px] border p-2 gap-4 border-gray-300">
       <div className="w-24 xl:w-28 h-24 xl:h-28 bg-[url('/app-dev.png')] bg-cover" />
       <div className="space-y-1">
         <h4 className="text-sm xl:text-base font-medium">{course}</h4>

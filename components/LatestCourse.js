@@ -20,7 +20,7 @@ const LatestCourse = () => {
               <a
                 className={
                   "cursor-pointer py-3 " +
-                  (courseType === "app_dev" && "border-b-2 border-black text-black")
+                  (courseType === "app_dev" && "border-b border-black")
                 }
                 onClick={handleClick}
                 id="app_dev"
@@ -32,7 +32,7 @@ const LatestCourse = () => {
               <a
                 className={
                   "cursor-pointer py-3 " +
-                  (courseType === "web_design" && "border-b-3 border-black text-black")
+                  (courseType === "web_design" && "border-b-2 border-black")
                 }
                 onClick={handleClick}
                 id="web_design"
@@ -44,7 +44,7 @@ const LatestCourse = () => {
               <a
                 className={
                   "cursor-pointer py-3 " +
-                  (courseType === "html" && "border-b-3 border-black text-black")
+                  (courseType === "html" && "border-b-2 border-black")
                 }
                 onClick={handleClick}
                 id="html"
@@ -56,7 +56,7 @@ const LatestCourse = () => {
               <a
                 className={
                   "cursor-pointer py-3 " +
-                  (courseType === "css" && "border-b-3 border-black text-black")
+                  (courseType === "css" && "border-b-2 border-black")
                 }
                 onClick={handleClick}
                 id="css"
@@ -80,7 +80,7 @@ const LatestCourse = () => {
                   initialCost={course.initialCost}
                   offerCost={course.offerCost}
                   key={course.id}
-                  className="border-2 border-gray-300 p-3"
+                  className="border border-gray-300 p-3"
                 />
               ))}
           </div>
